@@ -11,6 +11,10 @@ class HomeController extends Controller
 
         $movies = Movie::all();
         dd($movies);
-        return view('home');
+
+        $data =[
+            'movies' => $movies
+        ];
+        return view('home', $data);
     }
 }
